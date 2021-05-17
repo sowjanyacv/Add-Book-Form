@@ -1,54 +1,81 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Add Books</title>
-    </head>
-    <body>
-        <script language = "Javascript">
-        function validate()
-        {
-            var Toy_Name = document.getElementById("name").value;
-            var Toy_Type = document.getElementById("type").value;
-            var Quantity = parseInt(document.getElementById("quantity").value);
-            var Price = parseInt(document.getElementById("price").value);
-            var Amount = parseInt(document.getElementById("amt").value);
-            
-            if(/^([a-zA-Z0-9_-]){3,}$/.test(Toy_Name))
-                alert("Name Ok");
-            else
-                alert("Name Not Ok");
-
-            if(/^([a-zA-Z0-9_-]){5,}$/.test(Toy_Type))
-                alert("Type Ok");
-             else
-                alert("Type Not Ok");
-
-            if(!isNaN(Quantity) && Quantity>0)
-                alert("Quantity Ok");
-            else
-                alert("Quantity Not Ok");
-
-            if(!isNaN(Price) && Price>0)
-                alert("Price Ok");
-            else
-                alert("Price Not Ok");
-
-            if(Amount>=5)
-                alert("Amount Ok");
-            else
-                alert("Amount Not Ok");
-        </script>
-        <h2>
-            <span style="background-color: #000080; color: #ff6600;">Add Books</span>
-        </h2>
-        <table>
-            <tr><td>Toy Name</td><td><input type="text" id="name"/></td></tr>
-            <tr><td>Toy type</td><td><input type="text" id="type"/></td></tr>
-            <tr><td>Min-Age</td><td><input type="text" /></td></tr>
-            <tr><td>Max-Age</td><td><input type="text" /></td></tr>
-            <tr><td>Price</td><td><input type="text" id="price"/></td></tr>
-            <tr><td>Quantity Available in Stock</td><td><input type="text" id="quantity"/></td></tr>
-            <tr><td>Rental amount per day</td><td><input type="text" id="amt"/></td></tr>
-            <tr><td></td><td><input type="submit" value="Submit Query" onclick="validate()" /></td></tr>
-        </table>
-    </body>
+  <head>
+    <title>Add Books</title>
+    <script src="./App.js" defer></script>
+  </head>
+  <body>
+    <h2>
+      <span style="background-color: #000080; color: #ff6600;">Add Books</span>
+    </h2>
+    <table>
+      <tr>
+        <td>Book Name</td>
+        <td><input type="text" name="bname" minlength="3"></td>
+      </tr>
+      <tr>
+        <td>Book Type</td>
+        <td><input type="text" name="btype" minlength="5"></td>
+      </tr>
+   
+<tr>
+<td>Min-Age</td>
+<td>
+<select>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Max-Age</td>
+<td>
+<select>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+</td>
+</tr>
+      <tr>
+        <td>Price</td>
+        <td><input type="text" id="price" /></td>
+      </tr>
+      <tr>
+        <td>Quantity Available in Stock</td>
+        <td><input type="text" id="quantity" /></td>
+      </tr>
+      <tr>
+        <td>Rental amount per day</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="button" value="Submit" onclick="validate()" />
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
